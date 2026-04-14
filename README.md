@@ -13,6 +13,7 @@ Full stack IT Walk Up Support tracking system. Built with Node.js, MySQL, and Ja
 - run the following in the terminal:
 
 npm install
+
 node server.js
 
 3. Open Application
