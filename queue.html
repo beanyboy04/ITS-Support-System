@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Queue</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+  <div class="topbar">
+    <div class="topbar-left">
+      <button class="toggle-btn" onclick="toggleSidebar()">☰</button>
+      <h1>Queue</h1>
+    </div>
+
+    <button id="techBtn" class="tech-btn" onclick="handleTechButton()">
+      Technician
+    </button>
+  </div>
+
+  <div class="layout">
+
+    <div class="sidebar" id="sidebar">
+      <h2 class="logo">IT Desk</h2>
+
+      <button onclick="goHome()">Dashboard</button>
+      <button onclick="goToCheckIn()">Request Ticket</button>
+
+      <div id="techLinks" style="display: none;">
+        <button onclick="goToAnalytics()">Analytics</button>
+        <button onclick="goToQueue()">Queue</button>
+      </div>
+    </div>
+
+    <div class="main">
+
+      <div class="queue-filter-bar">
+        <label for="statusFilter">Show:</label>
+        <select id="statusFilter" onchange="applyFilter()">
+          <option value="Active" selected>Active Tickets</option>
+          <option value="On Hold">On Hold Tickets</option>
+          <option value="Resolved">Resolved Tickets</option>
+          <option value="All">All Tickets</option>
+        </select>
+      </div>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Ticket #</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Role</th>
+            <th>Category</th>
+            <th>Status</th>
+            <th>Technician</th>
+            <th>Resolution Notes</th>
+            <th>Check In</th>
+            <th>Check Out</th>
+            <th>Save</th>
+          </tr>
+        </thead>
+        <tbody id="queueBody"></tbody>
+      </table>
+
+    </div>
+  </div>
+
+  <script src="js/navigation.js"></script>
+  <script>
+    protectTechnicianPage();
+  </script>
+  <script src="js/queue.js"></script>
+
+</body>
+</html>

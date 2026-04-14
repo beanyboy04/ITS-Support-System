@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ITS Support System</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+  <div class="topbar">
+    <div class="topbar-left">
+      <button class="toggle-btn" onclick="toggleSidebar()">☰</button>
+      <h1>ITS Support System</h1>
+    </div>
+
+    <button id="techBtn" class="tech-btn" onclick="handleTechButton()">
+      Technician
+    </button>
+  </div>
+
+  <div class="layout">
+
+    <div class="sidebar" id="sidebar">
+      <h2 class="logo">IT Desk</h2>
+
+      <button onclick="goHome()">Dashboard</button>
+      <button onclick="goToCheckIn()">Request Ticket</button>
+
+      <div id="techLinks" style="display: none;">
+        <button onclick="goToAnalytics()">Analytics</button>
+        <button onclick="goToQueue()">Queue</button>
+      </div>
+    </div>
+
+    <div class="main">
+      <div class="welcome-box">
+        <h1>Welcome to ITS Support</h1>
+        <p>Monitor and manage IT service requests in real time.</p>
+      </div>
+
+      <h2>Live Dashboard</h2>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Ticket #</th>
+            <th>Requester</th>
+            <th>Category</th>
+            <th>Status</th>
+            <th>Technician</th>
+          </tr>
+        </thead>
+        <tbody id="ticketBody"></tbody>
+      </table>
+    </div>
+
+  </div>
+
+  <script src="js/navigation.js"></script>
+  <script src="js/dashboard.js"></script>
+
+</body>
+</html>

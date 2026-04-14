@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Request Ticket</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+  <div class="topbar">
+    <div class="topbar-left">
+      <button class="toggle-btn" onclick="goHome()">←</button>
+      <h1>Request Ticket</h1>
+    </div>
+
+    <button id="techBtn" class="tech-btn" onclick="handleTechButton()">
+      Technician
+    </button>
+  </div>
+
+  <div class="main">
+    <div class="form-box">
+      <h2>Create New Ticket</h2>
+
+      <input id="name" placeholder="Your Name">
+      <input id="email" type="email" placeholder="Your Email">
+
+      <select id="role">
+        <option value="">Select Role</option>
+        <option value="Student">Student</option>
+        <option value="Faculty">Faculty</option>
+      </select>
+
+      <select id="category">
+        <option value="">Loading categories...</option>
+      </select>
+
+      <button onclick="submitTicket()">Submit Ticket</button>
+    </div>
+  </div>
+
+  <script src="js/navigation.js"></script>
+  <script src="js/checkin.js"></script>
+</body>
+</html>
