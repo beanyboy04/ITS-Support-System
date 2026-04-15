@@ -37,6 +37,7 @@ const dbConfig = {
 - Run the following in the terminal:
 
 npm install
+
 node server.js
 
 ---
