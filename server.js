@@ -16,7 +16,7 @@ app.use(express.json());
 const dbConfig = {
   host: "localhost",
   user: "root",
-  password: "Totodile_100",
+  password: "YOUR_MYSQL_PASSWORD_HERE",
   database: "helpIT"
 };
 
