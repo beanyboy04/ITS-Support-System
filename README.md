@@ -30,7 +30,7 @@ Install the following:
 const dbConfig = {
   host: "localhost",
   user: "root",
-  password: "YOUR_PASSWORD_HERE",
+  password: "YOUR_MYSQLPASSWORD_HERE",
   database: "helpIT"
 };
 
